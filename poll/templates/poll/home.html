@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Online Voting System{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+  {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+    {% endfor %}
+  {% endif %}
+  <h1>Welcome to COSEKE Voting System</h1>
+  <h3>This is a simple voting application for small organization.</h3>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Login</a>
+  </p>
+</div>
+
+{% endblock %}

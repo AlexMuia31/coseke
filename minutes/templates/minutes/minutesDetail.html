@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Minutes details{% endblock %}
+
+{% block content %}
+  
+<section class="content">
+    <div class="page_header">
+        <h1>{{object.title}}</h1>
+    </div>
+    <div class="center">
+        <div class=" single editor_text">
+    
+            <div class="post_data">
+                <span class="author"><i class="fas fa-user"></i>Written on {{object.publication_date}}</span>
+        
+            </div>
+
+            <p>{{object.content | safe}}</p>
+
+            
+
+        </div>
+    </div>
+
+
+</section>
+
+
+
+{% endblock %}

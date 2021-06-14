@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+  <h2>Available Categories of Documents to Vote For</h2>
+  <ul>
+    {% for i in obj %}
+      <li><a href="{% url 'document' i.id %}">{{i.title}}</a></li>
+    {% empty %}
+      <p>No Documents Available</p>
+    {% endfor %}
+  </ul>
+{% endblock %}
